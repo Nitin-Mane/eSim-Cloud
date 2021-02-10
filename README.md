@@ -40,7 +40,10 @@ This system allows the users to drag and drop Arduino components from the left p
 
 ### Production Environment
 * Setup env (Change default credentials)
+  for Linux OS
   * ``` cp .env .env.prod ```
+  for Windows OS
+  * ``` copy .env .env.prod ```
 * Run docker (in background) 
   * ``` docker-compose -f docker-compose.prod.yml --env-file .env.prod up --scale django=2 --scale celery=3 -d```
   * Note: ```-d``` option will run the process in the background. 
